@@ -7,6 +7,15 @@ let wind_direction ="http://webapi19sa-1.course.tamk.cloud/v1/weather/wind_direc
 let weather_name = "http://webapi19sa-1.course.tamk.cloud/v1/weather/names";
 
 // Latest active measurement type names (based on the latest 50 measurements):
+fetch(wind_direction)
+.then(res => res.json())
+.then((wind_dir) => {
+  console.table('Checkout this JSON! ', wind_dir);
+  view3(wind_dir);
+})
+.catch(err => { throw err });
+
+
 
 fetch(weather_name)
 .then(res => res.json())
@@ -22,7 +31,7 @@ fetch(temperature)
 .then(res => res.json())
 .then((temp_name) => {
   console.table('Checkout this JSON! ', temp_name);
-  
+  show_temp(temp_name);
 })
 .catch(err => { throw err });
 
@@ -36,14 +45,74 @@ fetch(weather)
 })
 .catch(err => { throw err });
 
+function view3(data){
+  let tab = 
+  `<tr>
+    <th>Row_Number</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Measurement Type</th>
+    <th>value</th>
+   </tr>`;
+
+// Loop to access all rows 
+let count = 0;
+for (let r of data) {
+  
+  count = count +1;
+if(count<=20){
+  tab += `<tr> 
+<td>${count} </td>
+<td>${r.date_time.slice(0,10)}</td> 
+<td>${r.date_time.slice(11,19)}</td>
+<td>wind_direction</td>
+<td>${r.wind_direction}</td>
+</tr>`;
+  }
+}
+// Setting innerHTML as tab variable
+document.getElementById("View3").innerHTML = tab;
+}
+
+function show_temp(data){
+  let tab = 
+  `<tr>
+    <th>Row_Number</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Measurement Type</th>
+    <th>Value</th>
+   </tr>`;
+
+// Loop to access all rows 
+let count = 0;
+for (let r of data) {
+  
+  count = count +1;
+if(count<=20){
+  tab += `<tr> 
+<td>${count} </td>
+<td>${r.date_time.slice(0,10)}</td> 
+<td>${r.date_time.slice(11,19)}</td>
+<td>Temperature</td>
+<td>${r.temperature}</td>
+        
+</tr>`;
+}
+}
+// Setting innerHTML as tab variable
+document.getElementById("Temperature").innerHTML = tab;
+}
+
+
 function show(data) {
     let tab = 
         `<tr>
           <th>Row_Number</th>
+          <th>Date</th>
           <th>Time</th>
           <th>Measurement_Type</th>
           <th>Value</th>
-        
          </tr>`;
     
     // Loop to access all rows 
@@ -51,10 +120,11 @@ function show(data) {
     for (let r of data) {
         
         count = count +1;
-if(count<=50){
+    if(count<=50){
         tab += `<tr> 
     <td>${count} </td>
-    <td>${r.date_time.slice(11,19)}</td> 
+    <td>${r.date_time.slice(0,10)}</td> 
+    <td>${r.date_time.slice(11,19)}</td>
     <td>${Object.keys(r.data)}</td>
     <td>${Object.values(r.data)}</td>
               
@@ -64,4 +134,3 @@ if(count<=50){
     // Setting innerHTML as tab variable
     document.getElementById("employees").innerHTML = tab;
 }
-
