@@ -1,135 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<script src="https://cdn.flexmonster.com/flexmonster.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.0.4/echarts.min.js"></script>
-		<script src="Script.js"></script>
-        <link href="Style.css" rel="stylesheet" >
-		<!-- <link rel="stylesheet" href="style.css" /> -->
-		<meta charset="UTF-8" />
-		<meta name="viewport"
-			content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-	</head>
-	<body>
-		
 
-<div class="tabset">
-	<!-- Tab 1 -->
-	<input type="radio" name="tabset" id="tab1" aria-controls="marzen" checked>
-	<label for="tab1">View 1</label>
-	<!-- Tab 2 -->
-	<input type="radio" name="tabset" id="tab2" aria-controls="rauchbier">
-	<label for="tab2">View 2</label>
-	<!-- Tab 3 -->
-	<input type="radio" name="tabset" id="tab3" aria-controls="dunkles">
-	<label for="tab3">View 3</label>
-	
-	<div class="tab-panels">
-	  <section id="marzen" class="tab-panel">
-		<h1>50 Measurements Type and Values</h1>
-		<!-- table for showing data -->
-		<table id="employees" class="Tabuler"></table>
-		</section>
-	  <section id="rauchbier" class="tab-panel">
-		<h1>20 Temperature and Values</h1>
-		<!-- table for showing data -->
-		<table id="Temperature" class="Tabuler"></table>
-	  </section>
-	  <section id="dunkles" class="tab-panel">
-		<h1>20 Wind Directions and Values</h1>
-		<!-- table for showing data -->
-		<table id="View3" class="Tabuler"></table>
-	  </section>
-	</div>
-  </div>
-  <table>
-	<tr>
-	  <td>
-		<div id="pivot-container"></div>
-	  </td>
-	</tr>
-	<tr>
-	  <td>
-		<div id="main"></div>
-	  </td>
-	</tr>
-  </table>
-  <script>
-	  
-let pivot = new Flexmonster({
-  container: "pivot-container",
-  componentFolder: "https://cdn.flexmonster.com/",
-  licenseFilePath: "https://cdn.flexmonster.com/jsfiddle.charts.key",
-  report: {
-    dataSource: {
-      dataSourceType: "csv",
-      filename: "data/data.csv"
-    },
-    options: {
-      grid: {
-        showHeaders: false
-      }
-    }
-  },
-  height: 300,
-  toolbar: true,
-  reportcomplete: function() {
-    pivot.off("reportcomplete");
-    createChart();
-  }
-});
+<head>
 
-function createChart() {
-  pivot.getData({},
-    drawChart,
-    updateChart
-  );
-}
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+    <link href="Style.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
 
-function prepareDataFunction(rawData) {
-  let data = [];
-  for (let i = 0; i < rawData.data.length; i++) {
-    let record = rawData.data[i];
-    if (record.r0 == undefined || record.v0 == undefined) continue; //taking only facts for this sample
-    let _record = {
-      member: record.r0,
-      value: !isNaN(record.v0) ? record.v0 : 0
-    };
-    data.push(_record);
-  }
-  return data;
-}
+<body>
 
-function drawChart(rawData) {
-  // based on prepared DOM, initialize echarts instance
-  let myChart = echarts.init(document.getElementById('main'));
-  let data = prepareDataFunction(rawData);
-  // specify chart configuration item and data
-  let option = {
-    tooltip: {},
-    xAxis: {
-      data: data.map(function(d) {
-        return d.member;
-      })
-    },
-    yAxis: {},
-    series: [{
-      name: 'Category',
-      type: 'bar',
-      data: data.map(function(d) {
-        return d.value;
-      })
-    }]
-  };
-  // use configuration item and data specified to show chart
-  myChart.setOption(option);
-}
 
-function updateChart(rawData) {
-  drawChart(rawData);
-}
+    <div class="tabset">
+        <!-- Tab 1 -->
+        <input type="radio" name="tabset" id="tab1" aria-controls="marzen" checked>
+        <label for="tab1">View 1</label>
+        <!-- Tab 2 -->
+        <input type="radio" name="tabset" id="tab2" aria-controls="rauchbier">
+        <label for="tab2">View 2</label>
+        <!-- Tab 3 -->
+        <input type="radio" name="tabset" id="tab3" aria-controls="dunkles">
+        <label for="tab3">View 3</label>
 
-  </script>
-	</body>
+        <div class="tab-panels">
+            <section id="marzen" class="tab-panel">
+                <h1>50 Measurements Type and Values</h1>
+                <!-- table for showing data -->
+                <table id="employees" class="Tabuler"></table>
+            </section>
+            <section id="rauchbier" class="tab-panel">
+                <h1>20 Temperature and Values</h1>
+                <!-- table for showing data -->
+                <table id="Temperature" class="Tabuler"></table>
+
+                <div id="container" style="height: 500%;"></div>
+            </section>
+            <section id="dunkles" class="tab-panel">
+                <h1>20 Wind Directions and Values</h1>
+                <!-- table for showing data -->
+                <table id="View3" class="Tabuler"></table>
+
+                <div id="Chartview3" style="height: 500%;"></div>
+            </section>
+        </div>
+    </div>
+
+    <script src="Script.js"></script>
+
+</body>
+
 </html>
