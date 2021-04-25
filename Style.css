@@ -131,8 +131,32 @@ body {
     max-width: 65em;
 }
 
-#container {
+#bartemp_now {
     width: 1290px;
+}
+
+#bartemp_24 {
+    width: 1290px;
+}
+
+#bartemp_48 {
+    width: 1290px;
+}
+
+#bartemp_72 {
+    width: 1290px;
+}
+
+#bartemp_168 {
+    width: 1290px;
+}
+
+#bartemp_730 {
+    width: 1290px;
+}
+
+.inv {
+    display: none;
 }
 
 #Chartview3 {

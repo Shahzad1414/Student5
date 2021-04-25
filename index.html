@@ -27,16 +27,69 @@
 
         <div class="tab-panels">
             <section id="marzen" class="tab-panel">
-                <h1>50 Measurements Type and Values</h1>
+                <h1>The Latest 50 Measurements Type</h1>
                 <!-- table for showing data -->
                 <table id="employees" class="Tabuler"></table>
             </section>
             <section id="rauchbier" class="tab-panel">
-                <h1>20 Temperature and Values</h1>
-                <!-- table for showing data -->
-                <table id="Temperature" class="Tabuler"></table>
 
-                <div id="container" style="height: 500%;"></div>
+                <select id="target">
+                  <option value="content_1">Now..</option>
+                  <option value="content_2">24 hours</option>
+                  <option value="content_3">48 hours</option>
+                  <option value="content_4">72 hours</option>
+                  <option value="content_5">1 week</option>
+                  <option value="content_6">1 month</option>
+              <select>
+              <div id="content_1" class="inv">
+              <h1> The Latest 20 Measurements </h1>
+              <!-- table for showing data -->
+              <table id="Temp_now" class="Tabuler"></table>
+
+              <div id="bartemp_now" style="height: 500%;"></div>
+             
+              </div>
+             
+              <div id="content_2" class="inv">
+                <h1>Latest 24 hours, values are hourly averages</h1>
+                <table id="temp_24" class="Tabuler"></table>
+
+                <div id="bartemp_24" style="height: 500%;"></div>
+             
+              </div>
+              <div id="content_3" class="inv">
+                <h1>Latest 48 hours, values are hourly averages</h1>
+                <table id="temp_48" class="Tabuler"></table>
+
+                <div id="bartemp_48" style="height: 500%;"></div>
+             
+              </div>
+              <div id="content_4" class="inv">
+                <h1>Latest 72 hours, values are hourly averages</h1>
+                <table id="temp_72" class="Tabuler"></table>
+
+                <div id="bartemp_72" style="height: 500%;"></div>
+             
+              </div>
+              <div id="content_5" class="inv">
+                <h1>Latest Week, values are hourly averages</h1>
+                <table id="temp_168" class="Tabuler"></table>
+
+                <div id="bartemp_168" style="height: 500%;"></div>
+               
+              </div>
+              <div id="content_6" class="inv">
+              
+                <h1>Latest Month, values are hourly averages</h1>
+                <table id="temp_730" class="Tabuler"></table>
+
+                <div id="bartemp_730" style="height: 500%;"></div>
+               
+                
+              </div>
+              
+              
+              
             </section>
             <section id="dunkles" class="tab-panel">
                 <h1>20 Wind Directions and Values</h1>
