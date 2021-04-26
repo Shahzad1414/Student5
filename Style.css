@@ -23,7 +23,7 @@ li a:hover:not(.active) {
 }
 
  .active {
-  background-color: #4CAF50;
+  background-color: #28b9ed;
 }
 
 table {
@@ -60,7 +60,7 @@ table {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #4CAF50;
+    background-color: #28b9ed;
     color: white;
 }
 
@@ -159,62 +159,18 @@ body {
     max-width: 65em;
 }
 
-#barwind_24 {
-    width: 1290px;
-}
-
-
-#barwind_48 {
-    width: 1290px;
-}
-
-
-#barwind_72 {
-    width: 1290px;
-}
-
-
-#barwind_168 {
-    width: 1290px;
-}
-
-
-#barwind_730 {
-    width: 1290px;
-}
-
-
-#bartemp_now {
-    width: 1290px;
-}
-
-#bartemp_24 {
-    width: 1290px;
-}
-
-#bartemp_48 {
-    width: 1290px;
-}
-
-#bartemp_72 {
-    width: 1290px;
-}
-
-#bartemp_168 {
-    width: 1290px;
-}
-
-#bartemp_730 {
-    width: 1290px;
-}
-
-.inv {
-    display: none;
-}
-
-#Chartview3 {
-    width: 1290px;
-}
 #linechart{
     width: 1290px;
+}
+
+#barchart{
+    width: 1290px;
+}
+
+select {
+    margin-top:20px;
+    margin-bottom:20px;
+    font-size:20px;
+    width:200px;
+    height:50px;
 }
