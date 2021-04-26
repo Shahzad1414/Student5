@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    var dom = document.getElementById("linechart");
-    var myChart = echarts.init(dom);
+    var __dom = document.getElementById("linechart");
+    var __myChart = echarts.init(__dom);
     var app = {};
 
     var option;
@@ -51,7 +51,7 @@ $(document).ready(function() {
                     };
 
                     if (option && typeof option === 'object') {
-                        myChart.setOption(option);
+                        __myChart.setOption(option);
                     }
                 }
 
@@ -118,7 +118,7 @@ $(document).ready(function() {
                                     };
 
                                     if (option && typeof option === 'object') {
-                                        myChart.setOption(option);
+                                        __myChart.setOption(option);
                                     }
                                 }
 
@@ -174,7 +174,7 @@ $(document).ready(function() {
                                 };
 
                                 if (option && typeof option === 'object') {
-                                    myChart.setOption(option);
+                                    __myChart.setOption(option);
                                 }
 
 
@@ -231,7 +231,7 @@ $(document).ready(function() {
                                 };
 
                                 if (option && typeof option === 'object') {
-                                    myChart.setOption(option);
+                                    __myChart.setOption(option);
                                 }
 
 
@@ -288,7 +288,7 @@ $(document).ready(function() {
                                 };
 
                                 if (option && typeof option === 'object') {
-                                    myChart.setOption(option);
+                                    __myChart.setOption(option);
                                 }
 
 
@@ -346,7 +346,7 @@ $(document).ready(function() {
                                 };
 
                                 if (option && typeof option === 'object') {
-                                    myChart.setOption(option);
+                                    __myChart.setOption(option);
                                 }
 
 
@@ -403,7 +403,7 @@ $(document).ready(function() {
                                 };
 
                                 if (option && typeof option === 'object') {
-                                    myChart.setOption(option);
+                                    __myChart.setOption(option);
                                 }
 
 
@@ -467,7 +467,7 @@ $(document).ready(function() {
                                     };
 
                                     if (option && typeof option === 'object') {
-                                        myChart.setOption(option);
+                                        __myChart.setOption(option);
                                     }
                                 }
 
@@ -523,7 +523,7 @@ $(document).ready(function() {
                                 };
 
                                 if (option && typeof option === 'object') {
-                                    myChart.setOption(option);
+                                    __myChart.setOption(option);
                                 }
 
 
@@ -580,7 +580,7 @@ $(document).ready(function() {
                                 };
 
                                 if (option && typeof option === 'object') {
-                                    myChart.setOption(option);
+                                    __myChart.setOption(option);
                                 }
 
 
@@ -637,7 +637,7 @@ $(document).ready(function() {
                                 };
 
                                 if (option && typeof option === 'object') {
-                                    myChart.setOption(option);
+                                    __myChart.setOption(option);
                                 }
 
 
@@ -695,7 +695,7 @@ $(document).ready(function() {
                                 };
 
                                 if (option && typeof option === 'object') {
-                                    myChart.setOption(option);
+                                    __myChart.setOption(option);
                                 }
 
 
@@ -752,7 +752,7 @@ $(document).ready(function() {
                                 };
 
                                 if (option && typeof option === 'object') {
-                                    myChart.setOption(option);
+                                    __myChart.setOption(option);
                                 }
 
 
@@ -815,7 +815,7 @@ $(document).ready(function() {
                                     };
 
                                     if (option && typeof option === 'object') {
-                                        myChart.setOption(option);
+                                        __myChart.setOption(option);
                                     }
                                 }
 
@@ -871,7 +871,7 @@ $(document).ready(function() {
                                 };
 
                                 if (option && typeof option === 'object') {
-                                    myChart.setOption(option);
+                                    __myChart.setOption(option);
                                 }
 
 
@@ -928,7 +928,7 @@ $(document).ready(function() {
                                 };
 
                                 if (option && typeof option === 'object') {
-                                    myChart.setOption(option);
+                                    __myChart.setOption(option);
                                 }
 
 
@@ -985,7 +985,7 @@ $(document).ready(function() {
                                 };
 
                                 if (option && typeof option === 'object') {
-                                    myChart.setOption(option);
+                                    __myChart.setOption(option);
                                 }
 
 
@@ -1043,7 +1043,7 @@ $(document).ready(function() {
                                 };
 
                                 if (option && typeof option === 'object') {
-                                    myChart.setOption(option);
+                                    __myChart.setOption(option);
                                 }
 
 
@@ -1100,7 +1100,7 @@ $(document).ready(function() {
                                 };
 
                                 if (option && typeof option === 'object') {
-                                    myChart.setOption(option);
+                                    __myChart.setOption(option);
                                 }
 
 
@@ -1163,7 +1163,7 @@ $(document).ready(function() {
                                     };
 
                                     if (option && typeof option === 'object') {
-                                        myChart.setOption(option);
+                                        __myChart.setOption(option);
                                     }
                                 }
 
@@ -1219,7 +1219,7 @@ $(document).ready(function() {
                                 };
 
                                 if (option && typeof option === 'object') {
-                                    myChart.setOption(option);
+                                    __myChart.setOption(option);
                                 }
 
 
@@ -1276,7 +1276,7 @@ $(document).ready(function() {
                                 };
 
                                 if (option && typeof option === 'object') {
-                                    myChart.setOption(option);
+                                    __myChart.setOption(option);
                                 }
 
 
@@ -1333,7 +1333,7 @@ $(document).ready(function() {
                                 };
 
                                 if (option && typeof option === 'object') {
-                                    myChart.setOption(option);
+                                    __myChart.setOption(option);
                                 }
 
 
@@ -1391,7 +1391,7 @@ $(document).ready(function() {
                                 };
 
                                 if (option && typeof option === 'object') {
-                                    myChart.setOption(option);
+                                    __myChart.setOption(option);
                                 }
 
 
@@ -1448,7 +1448,7 @@ $(document).ready(function() {
                                 };
 
                                 if (option && typeof option === 'object') {
-                                    myChart.setOption(option);
+                                    __myChart.setOption(option);
                                 }
 
 
