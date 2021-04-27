@@ -23,7 +23,7 @@ li a:hover:not(.active) {
 }
 
 .active {
-    background-color: #5236f5;
+    background-color: #22a29a;
 }
 
 table {
@@ -60,7 +60,7 @@ table {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #5236f5;
+    background-color: #22a29a;
     color: white;
 }
 
@@ -149,10 +149,6 @@ body {
 *:before,
 *:after {
     box-sizing: border-box;
-}
-
-body {
-    padding: 30px;
 }
 
 .tabset {
