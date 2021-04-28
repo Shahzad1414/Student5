@@ -140,6 +140,17 @@ body {
     border-top: 1px solid #ccc;
 }
 
+.clock {
+    position: relative;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #17D4FE;
+    font-size: 60px;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+}
+
 
 /*
  Demo purposes only
